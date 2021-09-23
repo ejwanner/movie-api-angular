@@ -1,5 +1,11 @@
-<app-top-bar></app-top-bar>
-
-  <main>
-    <router-outlet></router-outlet>
-  </main>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <app-side-bar (sidenavClose)="sidenav.close()"></app-side-bar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-top-bar (sidenavToggle)="sidenav.toggle()"></app-top-bar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

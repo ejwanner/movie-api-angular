@@ -1,14 +1,21 @@
 <mat-toolbar color="primary">
+  <div>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
   <span>My Movie Database</span>
-  <ul>
-    <li>
-      <a>Movies</a>
-    </li>
-    <li>
-      <a>Series</a>
-    </li>
-    <li>
-      <a>Personal List</a>
-    </li>
-  </ul>
+  <div>
+    <ul>
+      <li>
+        <a routerLink="/movies">Movies</a>
+      </li>
+      <li>
+        <a routerLink="/series">Series</a>
+      </li>
+      <li>
+        <a routerLink="/personal-list">Personal List</a>
+      </li>
+    </ul>
+  </div>
 </mat-toolbar>
