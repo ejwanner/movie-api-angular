@@ -1,6 +1,10 @@
-a {
-  text-decoration: none;
-  color: white;
+mat-toolbar{
+  text-align: center;
+  background: #393D47;
+}
+
+.title {
+  color: #15f2fd;
 }
 
 ul {
@@ -8,20 +12,58 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
-
 }
 
-a:hover, a:active{
-  color: lightgray;
+.main-menu li {
+  margin-left: 3rem;
+  position: relative;
 }
+
+.main-menu a {
+  text-decoration: none;
+  color: #15f2fd;
+}
+
+.main-menu a:hover{
+  //color: #EB212E;
+}
+
+.main-menu a::before {
+  content: '';
+  display: block;
+  height: 0.2rem;
+  border-radius: 0 25px 25px 0;
+  background: #EB212E;
+  position: absolute;
+  bottom: 0;
+  left: 12.5%;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+.main-menu a:hover::before {
+  width: 75%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.icon-menu {
+  margin-right: 2rem;
+}
+
+.fav-icon {
+  margin-right: 2rem;
+}
+
 .navigation-items{
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-mat-toolbar{
-  border-radius: 3px;
-}
+
 @media(max-width: 959px){
   mat-toolbar{
     border-radius: 0px;

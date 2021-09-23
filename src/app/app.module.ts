@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
@@ -11,9 +12,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list";
 
-
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { MovieComponent } from './movies/movie.component';
+import { MoviesComponent } from './movies/movies.component';
 import { TvShowsComponent } from './tv-shows/tv-shows.component';
 import { PersonalListComponent } from './personal-list/personal-list.component';
 import { HomeComponent } from './home/home.component';
@@ -25,7 +25,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
   declarations: [
     AppComponent,
     TopBarComponent,
-    MovieComponent,
+    MoviesComponent,
     TvShowsComponent,
     PersonalListComponent,
     HomeComponent,
@@ -34,6 +34,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
