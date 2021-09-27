@@ -3,4 +3,5 @@ export interface MoviesModel {
   overview: string;
   title: string;
   vote_average: number;
+  poster_path: string;
 }

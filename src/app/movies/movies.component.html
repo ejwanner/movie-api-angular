@@ -1,4 +1,10 @@
 <div *ngFor="let movie of displayMovies">
-  <h3>{{ movie.title }}</h3>
-  <span>{{ movie.overview }}</span>
+  <div class="movie">
+    <img [src]="IMG_API + movie.poster_path">
+    <div class="movie-info">
+      <h3>{{ movie.title }}</h3>
+      <span>{{ movie.overview }}</span><br>
+      <span>{{ movie.vote_average }}</span>
+    </div>
+  </div>
 </div>

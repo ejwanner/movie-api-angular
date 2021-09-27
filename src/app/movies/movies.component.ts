@@ -11,8 +11,9 @@ import { MoviesModel } from "./models/movies.model";
 export class MoviesComponent implements OnInit {
 
   public displayMovies: MoviesModel[] = [];
+  public IMG_API = 'https://image.tmdb.org/t/p/w1280';
 
-  constructor(public movieService: MoviesService) { }
+  constructor( public movieService: MoviesService ) { }
 
   ngOnInit() {
     this.movieService.getMostPopularMovies()
