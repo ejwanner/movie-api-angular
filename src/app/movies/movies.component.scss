@@ -1,6 +1,8 @@
 .movie-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .movie {
@@ -8,7 +10,7 @@
   border-radius: 5px;
   box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 350px;
   margin: 1rem;
   position: relative;
 }
@@ -26,6 +28,14 @@
 
 .movie-info h3 {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 250px;
+}
+
+.movie-info span {
+  font-size: 28px;
 }
 
 .movie-overview {

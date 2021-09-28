@@ -1,10 +1,18 @@
 mat-toolbar{
   text-align: center;
   background: #393D47;
+  height: 6rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .title {
   color: #15f2fd;
+  margin-left: 1rem;
+}
+
+.burger-menu {
+  bottom: 0.4rem;
+  color: aliceblue;
 }
 
 ul {
@@ -22,10 +30,6 @@ ul {
 .main-menu a {
   text-decoration: none;
   color: #15f2fd;
-}
-
-.main-menu a:hover{
-  //color: #EB212E;
 }
 
 .main-menu a::before {
@@ -50,12 +54,31 @@ ul {
   flex: 1 1 auto;
 }
 
-.icon-menu {
-  margin-right: 2rem;
+.acc-icon {
+  margin: 1rem;
+  color: aliceblue;
+}
+
+mat-icon {
+  font-size: 30px;
+  margin-top: 0.7rem;
 }
 
 .fav-icon {
-  margin-right: 2rem;
+  margin: 1rem;
+  color: aliceblue;
+}
+
+
+.search {
+  color: aliceblue;
+  margin: 1rem;
+  max-height: 3rem;
+  font-size: 12px;
+}
+
+.search-input {
+  max-height: 2rem;
 }
 
 .navigation-items{

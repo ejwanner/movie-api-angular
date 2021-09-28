@@ -19,4 +19,8 @@ export class TopBarComponent implements OnInit {
     this.sidenavToggle.emit();
   }
 
+  public searchMovie() {
+    alert("Hallo")
+  }
+
 }

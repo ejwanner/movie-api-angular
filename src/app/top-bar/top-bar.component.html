@@ -1,6 +1,6 @@
 <mat-toolbar>
   <div>
-    <button mat-icon-button (click)="onToggleSidenav()">
+    <button mat-icon-button class="burger-menu" (click)="onToggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
@@ -19,9 +19,15 @@
     </ul>
   </div>
   <span class="spacer"></span>
+  <mat-form-field class="search" appearance="outline">
+    <mat-label>Search</mat-label>
+    <input class="search-input" matInput type="text">
+    <button matSuffix mat-icon-button aria-label="Clear" (click)="searchMovie()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
   <div class="icon-menu">
     <a class="fav-icon"><mat-icon>favorite</mat-icon></a>
     <a class="acc-icon"><mat-icon>account_circle</mat-icon></a>
   </div>
-
 </mat-toolbar>
