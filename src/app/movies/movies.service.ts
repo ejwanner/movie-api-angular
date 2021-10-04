@@ -13,5 +13,9 @@ export class MoviesService {
   getMostPopularMovies(): Observable<any> {
     return this.http.get<any>(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&${this.api_key}`);
   }
+
+  searchMovie(): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/search/movie?&${this.api_key}`);
+  }
 }
 

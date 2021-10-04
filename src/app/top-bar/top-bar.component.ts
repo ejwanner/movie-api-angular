@@ -1,4 +1,6 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {MoviesService} from "../movies/movies.service";
+import {FormControl, Validators} from "@angular/forms";
 
 
 @Component({
@@ -9,10 +11,12 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 export class TopBarComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
+  searchField: any;
 
-  constructor() { }
+  constructor(public moviesService: MoviesService) { }
 
   ngOnInit(): void {
+    this.searchField = new FormControl();
   }
 
   public onToggleSidenav = () => {
@@ -20,7 +24,10 @@ export class TopBarComponent implements OnInit {
   }
 
   public searchMovie() {
-    alert("Hallo")
+    const test = this.searchField?.value;
+    console.log(test)
+    //alert("Hallo")
+    this.searchField.reset();
   }
 
 }

@@ -12,7 +12,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list";
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MoviesComponent } from './movies/movies.component';
@@ -34,19 +34,20 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     HomeComponent,
     SideBarComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatButtonModule,
-        MatIconModule,
-        MatListModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        MatInputModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   exports: [
     MatToolbarModule,
