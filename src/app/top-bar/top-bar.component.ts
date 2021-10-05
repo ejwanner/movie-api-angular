@@ -26,7 +26,7 @@ export class TopBarComponent implements OnInit {
   public searchMovie() {
     const test = this.searchField?.value;
     console.log(test)
-    //alert("Hallo")
+    alert("Hallo")
     this.searchField.reset();
   }
 
