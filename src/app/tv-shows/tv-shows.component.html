@@ -1,1 +1,16 @@
-<p>series works!</p>
+<div class="tv-show-container">
+  <div *ngFor="let show of displayTvShows">
+    <div class="tv-show">
+      <img [src]="IMG_API + show.poster_path">
+      <div class="tv-show-info">
+        <h3>{{ show.name }}</h3>
+        <span>{{ show.vote_average }}</span>
+      </div>
+      <div class="tv-show-overview">
+        <h3>{{ show.name }}</h3>
+        <p>{{ show.overview }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

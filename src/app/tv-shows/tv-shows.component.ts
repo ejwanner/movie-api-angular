@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TvShowsModel } from "./models/tv-shows.model";
+import { TvShowsService } from "./tv-shows.service";
 
 @Component({
   selector: 'app-tv-shows',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TvShowsComponent implements OnInit {
 
-  constructor() { }
+  public displayTvShows: TvShowsModel[] = [];
+  public IMG_API = 'https://image.tmdb.org/t/p/w1280';
 
-  ngOnInit(): void {
+  constructor( public tvShowsService: TvShowsService ) { }
+
+  ngOnInit() {
+    this.tvShowsService.getMostPopularTvShows()
+      .subscribe((data) => {
+        this.displayTvShows = data.results;
+        console.log(this.displayTvShows)
+      });
   }
 
 }
