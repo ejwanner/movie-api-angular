@@ -12,7 +12,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list";
 import { MatInputModule } from '@angular/material/input';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MoviesComponent } from './movies/movies.component';
@@ -20,6 +20,8 @@ import { TvShowsComponent } from './tv-shows/tv-shows.component';
 import { PersonalListComponent } from './personal-list/personal-list.component';
 import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { GamesComponent } from './games/games.component';
+import { BooksComponent } from './books/books.component';
 
 
 
@@ -32,7 +34,9 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     TvShowsComponent,
     PersonalListComponent,
     HomeComponent,
-    SideBarComponent
+    SideBarComponent,
+    GamesComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
